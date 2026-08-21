@@ -5,10 +5,13 @@ metadata:
   name: roboshop
   region: us-east-1
 
+iam:
+  withOIDC: true
+
 managedNodeGroups:
-- name: roboshop-nodes
-  instanceTypes: ["t3.small"]
-  desiredCapacity: 2
-  minSize: 1
-  maxSize: 2
-  spot: false
+  - name: roboshop-nodes
+    instanceType: t3.small
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 2
+    privateNetworking: false
