@@ -9,6 +9,9 @@ availabilityZones:
   - us-east-1a
   - us-east-1b
 
+iam:
+  withOIDC: true
+
 autoModeConfig:
   enabled: false
 
@@ -18,3 +21,5 @@ managedNodeGroups:
     desiredCapacity: 2
     minSize: 1
     maxSize: 2
+    privateNetworking: false
+    volumeSize: 20
