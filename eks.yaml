@@ -4,9 +4,10 @@ kind: ClusterConfig
 metadata:
   name: roboshop
   region: us-east-1
+  zones: ["us-east-1a", "us-east-1b"]
 
-iam:
-  withOIDC: true
+autoModeConfig:
+  enabled: false
 
 managedNodeGroups:
   - name: roboshop-nodes
@@ -14,4 +15,3 @@ managedNodeGroups:
     desiredCapacity: 2
     minSize: 1
     maxSize: 2
-    privateNetworking: false
