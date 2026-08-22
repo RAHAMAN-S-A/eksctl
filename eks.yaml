@@ -12,12 +12,12 @@ iam:
 
 managedNodeGroups:
   - name: roboshop-nodes
-    instanceType: t3.small
+    instanceType: t3.micro
     amiFamily: AmazonLinux2023
 
-    desiredCapacity: 2
+    desiredCapacity: 1
     minSize: 1
-    maxSize: 2
+    maxSize: 1
 
     volumeSize: 20
     volumeType: gp3
